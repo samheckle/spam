@@ -1,0 +1,160 @@
+html,
+body,
+.webgl {
+  width: 100%;
+}
+
+html, body{
+  /* overflow:hidden; */
+  position: relative;
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.webgl {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  outline: none;
+  height: calc(.9*720px);
+}
+
+.actualizer {
+  position: relative;
+}
+
+.landing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 2px solid darkgrey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header div {
+  padding: 10px;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* display: flex;
+    align-items: center; */
+  text-align: center;
+}
+
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media only screen and (min-width: 720px){
+  #actualizer-question-wrapper {
+    height: calc(.9*720px);
+  }
+}
+
+@media only screen and (min-width: 1080px){
+  #actualizer-question-wrapper {
+    height: 90vh;
+  }
+}
+
+#actualizer-question-wrapper {
+  z-index: 1;
+  width: 33%;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actualizer-question{
+  width: 100%;
+}
+
+#question-text{
+
+  border: white 2px solid;
+  border-radius: 20px;
+}
+
+#question-text:hover{
+  color: black;
+  border: white 2px solid;
+  border-radius: 20px;
+  background-color: white;
+  transition: color 1.5s, background-color 1.5s;
+}
+
+#question-text, #agree, #disagree{
+  padding: 10px;
+  text-align: center;
+}
+
+.response{
+  border: white 2px solid;
+  border-radius: 20px;
+  width: 60px;
+  text-align: center;
+  transition: color .5s linear, background-color .5s linear;
+}
+
+.response:hover{
+  color: black;
+  background-color: white;
+  transition: color 1.5s, background-color 1.5s;
+
+}
+
+.actualizer-answer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.content img{
+  object-fit: cover;
+  width: 300px;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  align-items: center;
+  gap: 50px;
+}
